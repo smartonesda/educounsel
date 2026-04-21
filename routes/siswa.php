@@ -1,0 +1,66 @@
+<?php
+
+use App\Http\Controllers\Siswa\DashboardController;
+use App\Http\Controllers\Siswa\AbsensiController;
+use App\Http\Controllers\Siswa\KonselingController;
+use App\Http\Controllers\Student\AiCompanionController;
+use Illuminate\Support\Facades\Route;
+
+Route::middleware(['auth', 'role:siswa'])->prefix('siswa')->name('siswa.')->group(function () {
+    
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // Absensi
+    // Di dalam group route siswa
+Route::prefix('absensi')->name('absensi.')->group(function () {
+    Route::get('/', [AbsensiController::class, 'index'])->name('index');
+    Route::get('/riwayat', [AbsensiController::class, 'riwayat'])->name('riwayat');
+    Route::get('/create', [AbsensiController::class, 'create'])->name('create');
+    Route::post('/', [AbsensiController::class, 'store'])->name('store');
+    Route::get('/{absensi}', [AbsensiController::class, 'show'])->name('show');
+});
+    
+    // Konseling
+    Route::prefix('konseling')->name('konseling.')->group(function () {
+        Route::get('/ajukan', [KonselingController::class, 'create'])->name('ajukan');
+        Route::get('/jadwal', [KonselingController::class, 'jadwal'])->name('jadwal');
+        Route::get('/riwayat', [KonselingController::class, 'riwayat'])->name('riwayat');
+        Route::get('/riwayat/{id}', [KonselingController::class, 'show'])->name('riwayat.show');
+        Route::post('/{id}/note', [KonselingController::class, 'addNote'])->name('note.add');
+        Route::post('/{id}/goal/{goalId}/toggle', [KonselingController::class, 'toggleGoal'])->name('goal.toggle');
+        Route::get('/download', [KonselingController::class, 'downloadReport'])->name('download');
+    });
+    
+    // Violation/Pelanggaran
+    Route::get('/pelanggaran', function () {
+        return view('student.violation.index');
+    })->name('pelanggaran');
+    
+    // AI Companion Routes
+    Route::prefix('ai-companion')->name('ai-companion.')->group(function () {
+        Route::get('/', [AiCompanionController::class, 'index'])->name('index');
+        Route::post('/chat', [AiCompanionController::class, 'chat'])->name('chat');
+        Route::get('/history', [AiCompanionController::class, 'history'])->name('history');
+        Route::post('/clear', [AiCompanionController::class, 'clearHistory'])->name('clear');
+        Route::get('/stats', [AiCompanionController::class, 'stats'])->name('stats');
+    });
+    
+    // Kuesioner Routes
+    Route::prefix('kuesioner')->name('kuesioner')->group(function () {
+        Route::get('/', [\App\Http\Controllers\Student\QuestionnaireController::class, 'index']);
+        Route::get('/{id}', [\App\Http\Controllers\Student\QuestionnaireController::class, 'show'])->name('.show');
+        Route::post('/{id}', [\App\Http\Controllers\Student\QuestionnaireController::class, 'store'])->name('.store');
+    });
+    
+    Route::get('/materi', [\App\Http\Controllers\MateriController::class, 'studentIndex'])->name('materi');
+    Route::get('/materi/{materi}', [\App\Http\Controllers\MateriController::class, 'studentShow'])->name('materi.show');
+    
+    Route::get('/panduan', function () {
+        return view('siswa.panduan.index');
+    })->name('panduan');
+    
+    Route::get('/pengaturan', function () {
+        return view('siswa.pengaturan.index');
+    })->name('pengaturan');
+});
