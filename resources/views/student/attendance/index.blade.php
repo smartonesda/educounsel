@@ -112,7 +112,7 @@
 <div class="min-h-screen bg-gray-50 pt-16">
     <!-- Hero Header -->
     <div class="px-6 py-3">
-        <div class="bg-[#F1E6FA] rounded-xl p-4 relative overflow-hidden w-[1044px] h-[144px]">
+        <div class="bg-[#F1E6FA] rounded-xl p-4 relative overflow-hidden w-full min-h-[144px]">
             <div class="flex items-center justify-between">
                 <!-- Left Side - Text Content with Back Button -->
                 <div class="flex-1 z-10">

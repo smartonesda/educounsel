@@ -20,7 +20,6 @@
         </a>
     </div>
 
-    <!-- Counseling List -->
     <div style="background:white;border-radius:20px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
         <h3 style="font-size:18px;font-weight:700;color:#1f2937;margin-bottom:20px;">Riwayat Konseling</h3>
         <div style="text-align:center;padding:60px 20px;color:#9ca3af;">

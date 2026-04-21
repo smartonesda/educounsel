@@ -19,7 +19,7 @@
     }
 
     .form-container {
-        max-width: 1044px;
+        max-width: 100%;
         width: 100%;
         margin: 0 auto;
         padding: 20px 24px 32px 24px;
@@ -37,7 +37,7 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-        width: 1044px;
+        width: 100%;
         height: 144px;
         margin: 0 auto;
     }
@@ -108,7 +108,7 @@
         border-radius: 12px;
         padding: 24px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-        width: 1044px;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -303,7 +303,7 @@
         justify-content: flex-end;
         gap: 12px;
         margin-top: 20px;
-        width: 1044px;
+        width: 100%;
         margin: 20px auto 0;
     }
 
@@ -353,7 +353,7 @@
         .form-card,
         .form-actions {
             width: 100%;
-            max-width: 1044px;
+            max-width: 100%;
         }
         
         .form-row {

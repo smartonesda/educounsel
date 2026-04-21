@@ -4,17 +4,34 @@
 
 @section('content')
 <div class="p-6 pt-20">
-    <!-- Header dengan background ungu muda -->
-    <div class="bg-purple-100 rounded-xl p-6 mb-8">
-        <div class="flex items-center gap-4">
-            <a href="javascript:history.back()" class="w-10 h-10 flex items-center justify-center bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-all shadow-sm">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <div>
-                <h1 class="text-2xl font-bold text-gray-800 mb-1">Rekap Absensi</h1>
-                <p class="text-gray-500 text-sm">Rekap Absensi di halaman ini</p>
+    <!-- Premium Hero Header -->
+    <div class="bg-[#F1E6FA] rounded-xl p-6 relative overflow-hidden mb-8 w-full min-h-[144px]">
+        <div class="flex items-center justify-between">
+            <!-- Left Side - Text Content with Back Button -->
+            <div class="flex-1 z-10">
+                <div class="flex items-center mb-2">
+                    <button onclick="history.back()" class="mr-3 w-10 h-10 flex items-center justify-center bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-all shadow-sm">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h1 class="text-2xl font-bold text-gray-800">Rekap Absensi</h1>
+                </div>
+                <p class="text-gray-600 text-sm ml-14">
+                    Monitor laporan kehadiran, izin, dan alpha siswa secara menyeluruh.
+                </p>
+            </div>
+
+            <!-- Right Side - Chat Illustration -->
+            <div class="flex-shrink-0 z-10 hidden sm:block">
+                <img src="{{ asset('images/chat_ilustrasi.svg') }}"
+                     alt="Chat Illustration"
+                     class="w-32 h-32 object-contain transform hover:scale-105 transition-transform duration-300"
+                     onerror="this.style.display='none'">
             </div>
         </div>
+
+        <!-- Decorative Background Patterns -->
+        <div class="absolute top-0 right-0 w-40 h-40 bg-purple-200 opacity-20 rounded-full -translate-y-12 translate-x-12"></div>
+        <div class="absolute bottom-0 right-20 w-24 h-24 bg-purple-300 opacity-30 rounded-full translate-y-8"></div>
     </div>
 
     <!-- Judul Konten, Search dan Filter -->

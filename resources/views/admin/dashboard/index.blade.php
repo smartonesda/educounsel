@@ -3,11 +3,8 @@
 @section('title', 'Dashboard Admin - Educounsel')
 
 @section('content')
-<div class="min-h-screen bg-gradient-to-br from-[#D3B0EF] to-white bg-[50%_50%]">
-    @include('components.navbar')
-    
-    <div class="p-6 pt-24"> <!-- Added pt-24 to account for fixed navbar -->
-        
+<div class="min-h-screen bg-gradient-to-br from-[#D3B0EF] to-white bg-[50%_50%] -mx-4 -mt-4 lg:-mx-8 lg:-mt-8 p-4 lg:p-8 rounded-xl">
+    <div>
 
         <!-- Stats Grid - 4 Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

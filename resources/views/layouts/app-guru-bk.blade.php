@@ -177,7 +177,7 @@
             </div>
 
             <!-- Page Content -->
-            <main class="min-h-screen bg-gray-50 p-4 lg:p-8 w-full overflow-x-hidden">
+            <main class="min-h-screen bg-gray-50 px-2 py-4 sm:px-4 lg:p-8 w-full overflow-x-hidden">
                 @yield('content')
             </main>
         </div>

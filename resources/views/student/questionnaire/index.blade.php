@@ -101,7 +101,7 @@
 <div class="min-h-screen bg-white pt-16 font-['Roboto']">
     <!-- Header / Banner -->
     <div class="px-6 py-6">
-        <div class="bg-[#E9D7FF] rounded-[20px] p-6 w-[1044px] h-[144px] flex flex-col md:flex-row items-center justify-between gap-4 relative">
+        <div class="bg-[#E9D7FF] rounded-[20px] p-6 w-full min-h-[144px] flex flex-col md:flex-row items-center justify-between gap-4 relative">
             <!-- Back Button -->
             <a href="{{ route('student.dashboard') }}" class="absolute top-6 left-6 back-button text-gray-700 hover:text-gray-900">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

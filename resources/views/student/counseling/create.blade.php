@@ -73,7 +73,7 @@
 <div class="min-h-screen bg-[#F9FAFB] pt-16 font-['Roboto']">
     <!-- Header Section -->
     <div class="px-6 py-4">
-        <div class="bg-[#E9D7FF] rounded-xl p-4 w-[1044px] h-[144px] flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="bg-[#E9D7FF] rounded-xl p-4 w-full min-h-[144px] flex flex-col md:flex-row items-center justify-between gap-4">
             <!-- Title Section -->
             <div class="flex flex-col">
                 <h1 class="text-lg font-bold text-gray-900">Ajukan Konseling</h1>

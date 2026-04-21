@@ -23,7 +23,7 @@
     /* Header Banner */
     .header-banner {
         width: 100%;
-        max-width: 1044px;
+        max-width: 100%;
         height: 144px;
         background: #E8DAF7;
         border-radius: 16px;

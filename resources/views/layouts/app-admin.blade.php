@@ -54,7 +54,7 @@
             @include('components.navbar')
 
             <!-- Page Content -->
-            <main class="min-h-screen bg-[#F8F9FA] p-4 lg:p-8">
+            <main class="min-h-screen bg-[#F8F9FA] px-2 py-4 sm:px-4 lg:p-8">
                 @yield('content')
             </main>
         </div>
